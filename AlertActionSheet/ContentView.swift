@@ -18,19 +18,13 @@ struct ContentView: View {
     
     fileprivate func addTitle() -> some View {
         
-            Text("Alert & ActionSheet")
-                .font(Font.custom("Inter", size: 20))
-                .fontWeight(.bold)
-            
-//        .padding(.top)
-
-        .padding(.bottom, 70)
-
-        .offset(x: 0, y: 42)
+        Text("Alert & ActionSheet")
+            .font(Font.custom("Inter", size: 20))
+            .fontWeight(.bold)
         
-    
-
-  
+            .padding(.bottom, 70)
+        
+            .offset(x: 0, y: 42)
     }
     
     var body: some View {
@@ -119,11 +113,11 @@ struct ContentView: View {
                         .shadow(color: Color.gray, radius: 3, x: 0.0, y: 3.0)
                 }).confirmationDialog("ActionSheet", isPresented: $isErrorFour, titleVisibility: .visible) {
                     Button("Change Color", role: .destructive, action: {
-                            if alertFourColor == Color.red {
-                                alertFourColor = Color.button
-                            } else {
-                                alertFourColor = Color.red
-                            }
+                        if alertFourColor == Color.red {
+                            alertFourColor = Color.button
+                        } else {
+                            alertFourColor = Color.red
+                        }
                     })
                     Button("И так сойдёт", role: .cancel) {}
                 } message: {
